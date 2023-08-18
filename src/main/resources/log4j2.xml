@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Properties>
+        <Property name="path">logs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>
+                [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS}  %c{1} - %M:%L - %msg%n 
+                 <!-- %d [%t] %-5level %logger{36} - %msg %C.%M:%L%n  --> 
+                </pattern>>
+            </PatternLayout>
+        </Console>
+       <!--  <File name="App-Appender" fileName="${path}/app_log.log" > -->
+        <File name="App-Appender" fileName="D://mylog//app_log.log" >
+            <PatternLayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+        </File>
+           <File name="Log4J2Conf2-Appender" fileName="D://mylog//app2_log.log" >
+            <PatternLayout>
+                <pattern>
+                  %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level]  %class{36}.%M %L  - %msg%n
+                </pattern>
+            </PatternLayout>
+        </File>
+        <File name="SpringBoot-Appender" fileName="${path}/springboot_log.log" >
+            <PatternLayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.springframework.web" level="info" additivity="false">
+            <AppenderRef ref="SpringBoot-Appender"/>
+            <AppenderRef ref="Console-Appender"/>
+        </Logger> 
+        <Logger name="com.log4j.sample.Log4J2Conf" level="info" additivity="false">
+            <AppenderRef ref="App-Appender"/>
+            <AppenderRef ref="Console-Appender"/>
+         </Logger>
+           <Logger name="com.log4j.sample.Log4J2Conf2" level="info" additivity="false">
+            <AppenderRef ref="Log4J2Conf2-Appender"/>
+            <AppenderRef ref="Console-Appender"/>
+         </Logger>
+        <Root>
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>

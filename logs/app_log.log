@@ -1,0 +1,12 @@
+[INFO ] 2017-06-07 08:29:05.896 [main] Log4J2Conf - This is an info message
+[WARN ] 2017-06-07 08:29:05.897 [main] Log4J2Conf - This is a warn message
+[ERROR] 2017-06-07 08:29:05.897 [main] Log4J2Conf - This is an error message
+[FATAL] 2017-06-07 08:29:05.897 [main] Log4J2Conf - This is a fatal message
+[INFO ] 2023-08-18 12:26:19.849 [main] Log4J2Conf - This is an info message
+[WARN ] 2023-08-18 12:26:19.849 [main] Log4J2Conf - This is a warn message
+[ERROR] 2023-08-18 12:26:19.849 [main] Log4J2Conf - This is an error message
+[FATAL] 2023-08-18 12:26:19.849 [main] Log4J2Conf - This is a fatal message
+[INFO ] 2023-08-18 12:30:49.943 [main] Log4J2Conf - This is an info message
+[WARN ] 2023-08-18 12:30:49.943 [main] Log4J2Conf - This is a warn message
+[ERROR] 2023-08-18 12:30:49.943 [main] Log4J2Conf - This is an error message
+[FATAL] 2023-08-18 12:30:49.943 [main] Log4J2Conf - This is a fatal message
